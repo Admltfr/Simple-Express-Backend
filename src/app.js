@@ -1,6 +1,9 @@
 import express from "express";
-import errorHandler from "./middlewares/error-handler.js";
-import BaseError from "./error/base-error.js";
+import errorHandler from "./errors/error-handler.js";
+import BaseError from "./errors/base-error.js";
+
+// Api Routes
+import authRoutes from "./routes/auth-routes.js";
 
 class ExpressApplication {
   constructor(port) {
@@ -8,6 +11,7 @@ class ExpressApplication {
     this.port = port;
     this.setupMiddleware();
     this.setupRoutes();
+    this.setupErrorHandler();
   }
 
   setupMiddleware() {
@@ -16,9 +20,13 @@ class ExpressApplication {
   }
 
   setupRoutes() {
-    this.app.get("/test-base-error", (req, res) => {
-      throw BaseError.notFound("Test");
+    this.app.use("/api/v1/auth", authRoutes);
+    this.app.use("/*splat", (req, res, next) => {
+      next(BaseError.notFound("Route not found"));
     });
+  }
+
+  setupErrorHandler() {
     this.app.use(errorHandler);
   }
 

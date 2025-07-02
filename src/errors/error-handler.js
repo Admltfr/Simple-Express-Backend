@@ -1,5 +1,5 @@
-import statusCodes from "../error/status-codes.js";
-import BaseError from "../error/base-error.js";
+import statusCodes from "./status-codes.js";
+import BaseError from "./base-error.js";
 
 const errorHandler = (err, req, res, next) => {
   if (err instanceof BaseError) {

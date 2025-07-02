@@ -43,6 +43,7 @@ class BaseError extends Error {
       message
     );
   }
+  
 }
 
 export default BaseError;
