@@ -1,4 +1,6 @@
 import express from "express";
+import errorHandler from "./middlewares/error-handler.js";
+import BaseError from "./error/base-error.js";
 
 class ExpressApplication {
   constructor(port) {
@@ -14,7 +16,10 @@ class ExpressApplication {
   }
 
   setupRoutes() {
-
+    this.app.get("/test-base-error", (req, res) => {
+      throw BaseError.notFound("Test");
+    });
+    this.app.use(errorHandler);
   }
 
   start() {
