@@ -3,7 +3,7 @@ import errorHandler from "./errors/error-handler.js";
 import BaseError from "./errors/base-error.js";
 
 // Api Routes
-import authRoutes from "./routes/auth-routes.js";
+import authRoutes from "./domains/auth/auth-routes.js";
 
 class ExpressApplication {
   constructor(port) {

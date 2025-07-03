@@ -5,13 +5,13 @@ const errorHandler = (err, req, res, next) => {
   if (err instanceof BaseError) {
     return res.status(err.errorCode).json({
       success: false,
-      errorName: err.errorName,
+      status: err.errorName,
       message: err.message,
     });
   }
   res.status(statusCodes.INTERNAL_SERVER.code).json({
     success: false,
-    errorName: "Internal Server Error",
+    status: "Internal Server Error",
     message: err.message || statusCodes.INTERNAL_SERVER.message,
   });
 };

@@ -1,7 +1,7 @@
-import db from "../utils/db.js";
+import db from "../../utils/db.js";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
-import BaseError from "../errors/base-error.js";
+import BaseError from "../../errors/base-error.js";
 
 class AuthService {
   async login(email, password) {
