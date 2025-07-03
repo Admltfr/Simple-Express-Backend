@@ -1,4 +1,5 @@
 import express from "express";
+import morgan from "morgan";
 import errorHandler from "./errors/error-handler.js";
 import BaseError from "./errors/base-error.js";
 
@@ -17,10 +18,13 @@ class ExpressApplication {
   setupMiddleware() {
     this.app.use(express.json());
     this.app.use(express.urlencoded({ extended: true }));
+    this.app.use(morgan("tiny"));
   }
 
   setupRoutes() {
     this.app.use("/api/v1/auth", authRoutes);
+
+    // Handle Routes Not Found
     this.app.use("/*splat", (req, res, next) => {
       next(BaseError.notFound("Route not found"));
     });

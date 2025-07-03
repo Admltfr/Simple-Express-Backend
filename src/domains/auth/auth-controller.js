@@ -1,5 +1,5 @@
 import AuthService from "./auth-service.js";
-import BaseResponse from "../../utils/response.js";
+import BaseResponse from "../../utils/base-response.js";
 
 class AuthController {
   async login(req, res, next) {

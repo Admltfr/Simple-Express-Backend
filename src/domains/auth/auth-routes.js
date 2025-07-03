@@ -3,9 +3,20 @@ import AuthController from "./auth-controller.js";
 import validate from "../../middlewares/request-validator.js";
 import { loginSchema, registerSchema } from "./auth-schema.js";
 
-const router = express.Router();
+class AuthRoutes {
+  constructor() {
+    this.router = express.Router();
+    this.setRoutes();
+  }
 
-router.post("/login", validate(loginSchema), AuthController.login);
-router.post("/register", validate(registerSchema), AuthController.register);
+  setRoutes() {
+    this.router.post("/login", validate(loginSchema), AuthController.login);
+    this.router.post(
+      "/register",
+      validate(registerSchema),
+      AuthController.register
+    );
+  }
+}
 
-export default router;
+export default new AuthRoutes().router;

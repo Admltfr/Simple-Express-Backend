@@ -1,5 +1,4 @@
 import statusCodes from "../errors/status-codes.js";
-import BaseError from "../errors/base-error.js";
 
 class BaseResponse {
   static success(res, data, message = "Success") {
