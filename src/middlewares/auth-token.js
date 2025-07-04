@@ -1,5 +1,6 @@
 import jwt from "jsonwebtoken";
 import BaseError from "../errors/base-error.js";
+import db from "../utils/db.js";
 
 const authToken = async (req, res, next) => {
   try {
@@ -10,7 +11,7 @@ const authToken = async (req, res, next) => {
 
     const token = authHeader.split(" ")[1];
 
-    if (token == null) throw new BaseError.unauthorized("User Have Not Login");
+    if (token == null) throw BaseError.unauthorized("User Have Not Login");
 
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
     const user = await db.user.findUnique({
@@ -18,24 +19,21 @@ const authToken = async (req, res, next) => {
     });
 
     if (!user) {
-      return next(new BaseError.forbidden("User Not Found"));
+      return next(BaseError.forbidden("User Not Found"));
     }
 
     req.user = user;
 
     next();
   } catch (err) {
-    if (err.name === "JsonWebTokenError" || err.name === "TokenExpiredError") {
-      return next(BaseError.unauthorized("Token expired or invalid"));
+    if (err.message === "invalid signature") {
+      return next(new BaseError.forbidden("Invalid Signature"));
+    } else if (err.message === "invalid token") {
+      return next(BaseError.forbidden("Invalid Token"));
+    } else if (err.message === "jwt expired") {
+      return next(BaseError.forbidden("Token Expired"));
     } else {
-      return next(
-        new BaseError(
-          500,
-          "Internal Server Error",
-          "INTERNAL_SERVER_ERROR",
-          err.message || "An error occurred while processing the token"
-        )
-      );
+      return next(BaseError.forbidden("Token Is Invalid Or No Longer Valid"));
     }
   }
 };

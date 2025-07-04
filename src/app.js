@@ -5,6 +5,8 @@ import BaseError from "./errors/base-error.js";
 
 // Api Routes
 import authRoutes from "./domains/auth/auth-routes.js";
+import transactionRoutes from "./domains/transaction/transaction-routes.js";
+import transactionCategoryRoutes from "./domains/transaction_category/transaction_category-routes.js";
 
 class ExpressApplication {
   constructor(port) {
@@ -23,6 +25,8 @@ class ExpressApplication {
 
   setupRoutes() {
     this.app.use("/api/v1/auth", authRoutes);
+    this.app.use("/api/v1/transactions", transactionRoutes);
+    this.app.use("/api/v1/categories", transactionCategoryRoutes);
 
     // Handle Routes Not Found
     this.app.use("/*splat", (req, res, next) => {
