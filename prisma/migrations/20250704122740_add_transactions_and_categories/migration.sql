@@ -28,6 +28,3 @@ ALTER TABLE `transactions` ADD CONSTRAINT `transactions_user_id_fkey` FOREIGN KE
 
 -- AddForeignKey
 ALTER TABLE `transactions` ADD CONSTRAINT `transactions_category_id_fkey` FOREIGN KEY (`category_id`) REFERENCES `transaction_categories`(`id`) ON DELETE CASCADE ON UPDATE CASCADE;
-
--- RedefineIndex
-DROP INDEX `User_email_key` ON `user`;
