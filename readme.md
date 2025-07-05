@@ -1,7 +1,7 @@
 # Simple Express Backend API
 
 Proyek sederhana pengelola keuangan menggunakan Express.js
-Dokumentasi api dapat dilihat pada folder docs/
+Dokumentasi api dan erd dapat dilihat pada folder docs/
 
 ## 📦 Fitur Utama
 
@@ -21,10 +21,12 @@ Dokumentasi api dapat dilihat pada folder docs/
 
 ```
 Project/
+├── docs/
+│   ├── Api-Documentation.postman_collection
+│   └── ERD
 ├── prisma/
 │   ├── migrations/
 │   └── schema.prisma
-|
 ├── src/
 │   ├── app.js
 │   ├── server.js
