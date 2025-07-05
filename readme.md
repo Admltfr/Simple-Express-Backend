@@ -1,6 +1,7 @@
 # Simple Express Backend API
 
 Proyek sederhana pengelola keuangan menggunakan Express.js
+Dokumentasi api dapat dilihat pada folder docs/
 
 ## 📦 Fitur Utama
 
