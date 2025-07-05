@@ -1,0 +1,2061 @@
+{
+	"info": {
+		"_postman_id": "2eca68fc-1e8c-4132-83da-d190cc0abba7",
+		"name": "Mini-Project",
+		"description": "Github Repository : [https://github.com/Admltfr/Simple-Express-Backend](https://github.com/Admltfr/Simple-Express-Backend)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "46495196"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"User\",\r\n    \"email\": \"user@gmail.com\",\r\n    \"password\": \"Password123!\",\r\n    \"password_confirmation\": \"Password123!\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://simple-express-backend-production.up.railway.app/api/v1/auth/register",
+							"protocol": "https",
+							"host": [
+								"simple-express-backend-production",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Res Register",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"User\",\r\n    \"email\": \"user@gmail.com\",\r\n    \"password\": \"Password123!\",\r\n    \"password_confirmation\": \"Password123!\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://simple-express-backend-production.up.railway.app/api/v1/auth/register",
+									"protocol": "https",
+									"host": [
+										"simple-express-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"api",
+										"v1",
+										"auth",
+										"register"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "165"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 05 Jul 2025 13:16:25 GMT"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"a5-VMhPXzoY50OkU4dx35QiGKuxbss\""
+								},
+								{
+									"key": "Server",
+									"value": "railway-edge"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "X-Railway-Edge",
+									"value": "railway/asia-southeast1-eqsg3a"
+								},
+								{
+									"key": "X-Railway-Request-Id",
+									"value": "EQZVJkOYSwObYJ9YAQeqjw"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"status\": \"Created\",\n    \"message\": \"Register success\",\n    \"data\": {\n        \"user\": {\n            \"id\": \"8f2c9467-d699-41ef-899f-558fe0087348\",\n            \"name\": \"User\",\n            \"email\": \"user@gmail.com\"\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"user@gmail.com\",\r\n    \"password\": \"Password123!\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://simple-express-backend-production.up.railway.app/api/v1/auth/login",
+							"protocol": "https",
+							"host": [
+								"simple-express-backend-production",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Res Login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"user@gmail.com\",\r\n    \"password\": \"Password123!\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://simple-express-backend-production.up.railway.app/api/v1/auth/login",
+									"protocol": "https",
+									"host": [
+										"simple-express-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"api",
+										"v1",
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "388"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 05 Jul 2025 13:17:04 GMT"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"184-9L1WVCoHGg4tLJlwltmvC1g2lEE\""
+								},
+								{
+									"key": "Server",
+									"value": "railway-edge"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "X-Railway-Edge",
+									"value": "railway/asia-southeast1-eqsg3a"
+								},
+								{
+									"key": "X-Railway-Request-Id",
+									"value": "S5zqW2hjQhW1dKkyAQeqjw"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"status\": \"OK\",\n    \"message\": \"Login success\",\n    \"data\": {\n        \"user\": {\n            \"id\": \"8f2c9467-d699-41ef-899f-558fe0087348\",\n            \"email\": \"user@gmail.com\",\n            \"name\": \"User\"\n        },\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjhmMmM5NDY3LWQ2OTktNDFlZi04OTlmLTU1OGZlMDA4NzM0OCIsImVtYWlsIjoidXNlckBnbWFpbC5jb20iLCJpYXQiOjE3NTE3MjE0MjQsImV4cCI6MTc1MTgwNzgyNH0.e2ovKBsnrWjnAQaxabgIMJV6x7Ukh138juK3LPKUnhE\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get user data by ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjhmMmM5NDY3LWQ2OTktNDFlZi04OTlmLTU1OGZlMDA4NzM0OCIsImVtYWlsIjoidXNlckBnbWFpbC5jb20iLCJpYXQiOjE3NTE3MjE0MjQsImV4cCI6MTc1MTgwNzgyNH0.e2ovKBsnrWjnAQaxabgIMJV6x7Ukh138juK3LPKUnhE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"8f2c9467-d699-41ef-899f-558fe0087348\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://simple-express-backend-production.up.railway.app/api/v1/auth/me",
+							"protocol": "https",
+							"host": [
+								"simple-express-backend-production",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"me"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Res Get user data by ID",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"id\": \"8f2c9467-d699-41ef-899f-558fe0087348\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://simple-express-backend-production.up.railway.app/api/v1/auth/me",
+									"protocol": "https",
+									"host": [
+										"simple-express-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"api",
+										"v1",
+										"auth",
+										"me"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "203"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 05 Jul 2025 13:18:11 GMT"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"cb-0y+zQza9z1AfxdPoz4gccczaMAI\""
+								},
+								{
+									"key": "Server",
+									"value": "railway-edge"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "X-Railway-Edge",
+									"value": "railway/asia-southeast1-eqsg3a"
+								},
+								{
+									"key": "X-Railway-Request-Id",
+									"value": "VZV1-5xLRjm9FedQAQeqjw"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"status\": \"OK\",\n    \"message\": \"Fetch user data success\",\n    \"data\": {\n        \"user\": {\n            \"name\": \"User\",\n            \"email\": \"user@gmail.com\",\n            \"created_at\": \"2025-07-05T13:16:25.646Z\",\n            \"updated_at\": \"2025-07-05T13:16:25.646Z\"\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update user data (Name)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjhmMmM5NDY3LWQ2OTktNDFlZi04OTlmLTU1OGZlMDA4NzM0OCIsImVtYWlsIjoidXNlckBnbWFpbC5jb20iLCJpYXQiOjE3NTE3MjE0MjQsImV4cCI6MTc1MTgwNzgyNH0.e2ovKBsnrWjnAQaxabgIMJV6x7Ukh138juK3LPKUnhE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"8f2c9467-d699-41ef-899f-558fe0087348\",\r\n  \"name\": \"adam\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://simple-express-backend-production.up.railway.app/api/v1/auth/me",
+							"protocol": "https",
+							"host": [
+								"simple-express-backend-production",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"me"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Res Update user data (Name)",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"id\": \"8f2c9467-d699-41ef-899f-558fe0087348\",\r\n  \"name\": \"adam\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://simple-express-backend-production.up.railway.app/api/v1/auth/me",
+									"protocol": "https",
+									"host": [
+										"simple-express-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"api",
+										"v1",
+										"auth",
+										"me"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "241"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 05 Jul 2025 13:18:37 GMT"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"f1-neK9GbmndUSiWmLfwJMQmrCp3JA\""
+								},
+								{
+									"key": "Server",
+									"value": "railway-edge"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "X-Railway-Edge",
+									"value": "railway/asia-southeast1-eqsg3a"
+								},
+								{
+									"key": "X-Railway-Request-Id",
+									"value": "3qklx9FBRkG6tqClAQeqjw"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"status\": \"OK\",\n    \"message\": \"Update user success\",\n    \"data\": {\n        \"user\": {\n            \"id\": \"8f2c9467-d699-41ef-899f-558fe0087348\",\n            \"name\": \"adam\",\n            \"email\": \"user@gmail.com\",\n            \"createdAt\": \"2025-07-05T13:16:25.646Z\",\n            \"updatedAt\": \"2025-07-05T13:18:37.779Z\"\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update user data (Name+Email)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjhmMmM5NDY3LWQ2OTktNDFlZi04OTlmLTU1OGZlMDA4NzM0OCIsImVtYWlsIjoidXNlckBnbWFpbC5jb20iLCJpYXQiOjE3NTE3MjE0MjQsImV4cCI6MTc1MTgwNzgyNH0.e2ovKBsnrWjnAQaxabgIMJV6x7Ukh138juK3LPKUnhE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"8f2c9467-d699-41ef-899f-558fe0087348\",\r\n    \"name\": \"adamatmind\",\r\n    \"email\": \"adam@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://simple-express-backend-production.up.railway.app/api/v1/auth/me",
+							"protocol": "https",
+							"host": [
+								"simple-express-backend-production",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"me"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Res Update user data (Name+Email)",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": \"8f2c9467-d699-41ef-899f-558fe0087348\",\r\n    \"name\": \"adamatmind\",\r\n    \"email\": \"adam@gmail.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://simple-express-backend-production.up.railway.app/api/v1/auth/me",
+									"protocol": "https",
+									"host": [
+										"simple-express-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"api",
+										"v1",
+										"auth",
+										"me"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "247"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 05 Jul 2025 13:18:49 GMT"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"f7-Jvt9XxCs0e+NijfbcWL4ElDYB78\""
+								},
+								{
+									"key": "Server",
+									"value": "railway-edge"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "X-Railway-Edge",
+									"value": "railway/asia-southeast1-eqsg3a"
+								},
+								{
+									"key": "X-Railway-Request-Id",
+									"value": "LRwP7mNKTrmzQRExAQeqjw"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"status\": \"OK\",\n    \"message\": \"Update user success\",\n    \"data\": {\n        \"user\": {\n            \"id\": \"8f2c9467-d699-41ef-899f-558fe0087348\",\n            \"name\": \"adamatmind\",\n            \"email\": \"adam@gmail.com\",\n            \"createdAt\": \"2025-07-05T13:16:25.646Z\",\n            \"updatedAt\": \"2025-07-05T13:18:49.424Z\"\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get all user data",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImIwOThjZTJlLWZkNzMtNGE0NC04ZThjLWQxMTY1ZmE5YTExZSIsImVtYWlsIjoidXNlckBnbWFpbC5jb20iLCJpYXQiOjE3NTE3MTM3MjQsImV4cCI6MTc1MTgwMDEyNH0.W3-FfIITYnkStQriJoAZRflQJtfcJj-Zkt27yaS6Qls",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://simple-express-backend-production.up.railway.app/api/v1/auth/users",
+							"protocol": "https",
+							"host": [
+								"simple-express-backend-production",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"users"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Res Get all user data",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://simple-express-backend-production.up.railway.app/api/v1/auth/users",
+									"protocol": "https",
+									"host": [
+										"simple-express-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"api",
+										"v1",
+										"auth",
+										"users"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "419"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 05 Jul 2025 13:19:07 GMT"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"1a3-mj8yhwm5yjtc4BZqiegSYu35kxA\""
+								},
+								{
+									"key": "Server",
+									"value": "railway-edge"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "X-Railway-Edge",
+									"value": "railway/asia-southeast1-eqsg3a"
+								},
+								{
+									"key": "X-Railway-Request-Id",
+									"value": "JTEOKWsvTg6zWf5SAQeqjw"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"status\": \"OK\",\n    \"message\": \"Fetch all users success\",\n    \"data\": {\n        \"users\": [\n            {\n                \"id\": \"0250816e-8b48-448e-bb19-04e82a7fb3cd\",\n                \"name\": \"admin\",\n                \"email\": \"admin@gmail.com\",\n                \"createdAt\": \"2025-07-05T08:45:45.576Z\",\n                \"updatedAt\": \"2025-07-05T08:45:45.576Z\"\n            },\n            {\n                \"id\": \"8f2c9467-d699-41ef-899f-558fe0087348\",\n                \"name\": \"adamatmind\",\n                \"email\": \"adam@gmail.com\",\n                \"createdAt\": \"2025-07-05T13:16:25.646Z\",\n                \"updatedAt\": \"2025-07-05T13:18:49.424Z\"\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjhmMmM5NDY3LWQ2OTktNDFlZi04OTlmLTU1OGZlMDA4NzM0OCIsImVtYWlsIjoidXNlckBnbWFpbC5jb20iLCJpYXQiOjE3NTE3MjE0MjQsImV4cCI6MTc1MTgwNzgyNH0.e2ovKBsnrWjnAQaxabgIMJV6x7Ukh138juK3LPKUnhE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"8f2c9467-d699-41ef-899f-558fe0087348\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://simple-express-backend-production.up.railway.app/api/v1/auth/me",
+							"protocol": "https",
+							"host": [
+								"simple-express-backend-production",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"me"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Res Delete user",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"id\": \"8f2c9467-d699-41ef-899f-558fe0087348\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://simple-express-backend-production.up.railway.app/api/v1/auth/me",
+									"protocol": "https",
+									"host": [
+										"simple-express-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"api",
+										"v1",
+										"auth",
+										"me"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "247"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 05 Jul 2025 13:27:00 GMT"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"f7-GSHhsUaDiprIZMRoOZdcKliSf90\""
+								},
+								{
+									"key": "Server",
+									"value": "railway-edge"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "X-Railway-Edge",
+									"value": "railway/asia-southeast1-eqsg3a"
+								},
+								{
+									"key": "X-Railway-Request-Id",
+									"value": "9N1D0wq7SemTzCOjDcO5xA"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"status\": \"OK\",\n    \"message\": \"Delete user success\",\n    \"data\": {\n        \"user\": {\n            \"id\": \"8f2c9467-d699-41ef-899f-558fe0087348\",\n            \"name\": \"adamatmind\",\n            \"email\": \"adam@gmail.com\",\n            \"createdAt\": \"2025-07-05T13:16:25.646Z\",\n            \"updatedAt\": \"2025-07-05T13:18:49.424Z\"\n        }\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Transaction Categories",
+			"item": [
+				{
+					"name": "Create Category",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjhmMmM5NDY3LWQ2OTktNDFlZi04OTlmLTU1OGZlMDA4NzM0OCIsImVtYWlsIjoidXNlckBnbWFpbC5jb20iLCJpYXQiOjE3NTE3MjE0MjQsImV4cCI6MTc1MTgwNzgyNH0.e2ovKBsnrWjnAQaxabgIMJV6x7Ukh138juK3LPKUnhE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Makanan\",\r\n  \"description\": \"Pengeluaran makan\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://simple-express-backend-production.up.railway.app/api/v1/categories/",
+							"protocol": "https",
+							"host": [
+								"simple-express-backend-production",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"api",
+								"v1",
+								"categories",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Res Create Category",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"Makanan\",\r\n  \"description\": \"Pengeluaran makan\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://simple-express-backend-production.up.railway.app/api/v1/categories/",
+									"protocol": "https",
+									"host": [
+										"simple-express-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"api",
+										"v1",
+										"categories",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "259"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 05 Jul 2025 13:21:12 GMT"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"103-T9Aq0X6lgt5Zn36V1JkZ4p0V8DU\""
+								},
+								{
+									"key": "Server",
+									"value": "railway-edge"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "X-Railway-Edge",
+									"value": "railway/asia-southeast1-eqsg3a"
+								},
+								{
+									"key": "X-Railway-Request-Id",
+									"value": "LO5XxgZbRu-InS1LDcO5xA"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"status\": \"Created\",\n    \"message\": \"Category created\",\n    \"data\": {\n        \"category\": {\n            \"id\": \"c8c1409c-1507-4b16-b49a-f33077595c1e\",\n            \"name\": \"Makanan\",\n            \"description\": \"Pengeluaran makan\",\n            \"createdAt\": \"2025-07-05T13:21:12.804Z\",\n            \"updatedAt\": \"2025-07-05T13:21:12.804Z\"\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get all Category",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjhmMmM5NDY3LWQ2OTktNDFlZi04OTlmLTU1OGZlMDA4NzM0OCIsImVtYWlsIjoidXNlckBnbWFpbC5jb20iLCJpYXQiOjE3NTE3MjE0MjQsImV4cCI6MTc1MTgwNzgyNH0.e2ovKBsnrWjnAQaxabgIMJV6x7Ukh138juK3LPKUnhE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://simple-express-backend-production.up.railway.app/api/v1/categories/",
+							"protocol": "https",
+							"host": [
+								"simple-express-backend-production",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"api",
+								"v1",
+								"categories",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Res Get all Category",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://simple-express-backend-production.up.railway.app/api/v1/categories/",
+									"protocol": "https",
+									"host": [
+										"simple-express-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"api",
+										"v1",
+										"categories",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "436"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 05 Jul 2025 13:21:32 GMT"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"1b4-kj+6mrqVzaJ0W0DhcXfniczrfzk\""
+								},
+								{
+									"key": "Server",
+									"value": "railway-edge"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "X-Railway-Edge",
+									"value": "railway/asia-southeast1-eqsg3a"
+								},
+								{
+									"key": "X-Railway-Request-Id",
+									"value": "9Mi8-plwTjqxmyoNDcO5xA"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"status\": \"OK\",\n    \"message\": \"Fetch categories success\",\n    \"data\": {\n        \"categories\": [\n            {\n                \"id\": \"2bd2212e-baaa-475e-aa39-9f28a5ded877\",\n                \"name\": \"Kendaraan\",\n                \"description\": \"Uang motor\",\n                \"createdAt\": \"2025-07-05T12:54:25.266Z\",\n                \"updatedAt\": \"2025-07-05T13:03:26.257Z\"\n            },\n            {\n                \"id\": \"c8c1409c-1507-4b16-b49a-f33077595c1e\",\n                \"name\": \"Makanan\",\n                \"description\": \"Pengeluaran makan\",\n                \"createdAt\": \"2025-07-05T13:21:12.804Z\",\n                \"updatedAt\": \"2025-07-05T13:21:12.804Z\"\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Category by ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjhmMmM5NDY3LWQ2OTktNDFlZi04OTlmLTU1OGZlMDA4NzM0OCIsImVtYWlsIjoidXNlckBnbWFpbC5jb20iLCJpYXQiOjE3NTE3MjE0MjQsImV4cCI6MTc1MTgwNzgyNH0.e2ovKBsnrWjnAQaxabgIMJV6x7Ukh138juK3LPKUnhE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://simple-express-backend-production.up.railway.app/api/v1/categories/2bd2212e-baaa-475e-aa39-9f28a5ded877",
+							"protocol": "https",
+							"host": [
+								"simple-express-backend-production",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"api",
+								"v1",
+								"categories",
+								"2bd2212e-baaa-475e-aa39-9f28a5ded877"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Res Get Category by ID",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://simple-express-backend-production.up.railway.app/api/v1/categories/2bd2212e-baaa-475e-aa39-9f28a5ded877",
+									"protocol": "https",
+									"host": [
+										"simple-express-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"api",
+										"v1",
+										"categories",
+										"2bd2212e-baaa-475e-aa39-9f28a5ded877"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "255"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 05 Jul 2025 13:21:41 GMT"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"ff-Zn5k2zwI+QWw9ksHd7B+92LtI7c\""
+								},
+								{
+									"key": "Server",
+									"value": "railway-edge"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "X-Railway-Edge",
+									"value": "railway/asia-southeast1-eqsg3a"
+								},
+								{
+									"key": "X-Railway-Request-Id",
+									"value": "CthQeDMVS7iUhfDaDcO5xA"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"status\": \"OK\",\n    \"message\": \"Fetch category success\",\n    \"data\": {\n        \"category\": {\n            \"id\": \"2bd2212e-baaa-475e-aa39-9f28a5ded877\",\n            \"name\": \"Kendaraan\",\n            \"description\": \"Uang motor\",\n            \"createdAt\": \"2025-07-05T12:54:25.266Z\",\n            \"updatedAt\": \"2025-07-05T13:03:26.257Z\"\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Category (Name)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjhmMmM5NDY3LWQ2OTktNDFlZi04OTlmLTU1OGZlMDA4NzM0OCIsImVtYWlsIjoidXNlckBnbWFpbC5jb20iLCJpYXQiOjE3NTE3MjE0MjQsImV4cCI6MTc1MTgwNzgyNH0.e2ovKBsnrWjnAQaxabgIMJV6x7Ukh138juK3LPKUnhE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Transportasi\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://simple-express-backend-production.up.railway.app/api/v1/categories/2bd2212e-baaa-475e-aa39-9f28a5ded877",
+							"protocol": "https",
+							"host": [
+								"simple-express-backend-production",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"api",
+								"v1",
+								"categories",
+								"2bd2212e-baaa-475e-aa39-9f28a5ded877"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Res Update Category (Name)",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"Transportasi\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://simple-express-backend-production.up.railway.app/api/v1/categories/2bd2212e-baaa-475e-aa39-9f28a5ded877",
+									"protocol": "https",
+									"host": [
+										"simple-express-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"api",
+										"v1",
+										"categories",
+										"2bd2212e-baaa-475e-aa39-9f28a5ded877"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "252"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 05 Jul 2025 13:21:50 GMT"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"fc-tiTSuh9Vjv53gtGaE7F6Vogs294\""
+								},
+								{
+									"key": "Server",
+									"value": "railway-edge"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "X-Railway-Edge",
+									"value": "railway/asia-southeast1-eqsg3a"
+								},
+								{
+									"key": "X-Railway-Request-Id",
+									"value": "EYVlnUbtSTODJhzYDcO5xA"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"status\": \"OK\",\n    \"message\": \"Category updated\",\n    \"data\": {\n        \"category\": {\n            \"id\": \"2bd2212e-baaa-475e-aa39-9f28a5ded877\",\n            \"name\": \"Transportasi\",\n            \"description\": \"Uang motor\",\n            \"createdAt\": \"2025-07-05T12:54:25.266Z\",\n            \"updatedAt\": \"2025-07-05T13:21:50.524Z\"\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Category (Name+Desc)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjhmMmM5NDY3LWQ2OTktNDFlZi04OTlmLTU1OGZlMDA4NzM0OCIsImVtYWlsIjoidXNlckBnbWFpbC5jb20iLCJpYXQiOjE3NTE3MjE0MjQsImV4cCI6MTc1MTgwNzgyNH0.e2ovKBsnrWjnAQaxabgIMJV6x7Ukh138juK3LPKUnhE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Kendaraan\",\r\n    \"description\": \"Uang motor\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://simple-express-backend-production.up.railway.app/api/v1/categories/2bd2212e-baaa-475e-aa39-9f28a5ded877",
+							"protocol": "https",
+							"host": [
+								"simple-express-backend-production",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"api",
+								"v1",
+								"categories",
+								"2bd2212e-baaa-475e-aa39-9f28a5ded877"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Res Update Category (Name+Desc)",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Kendaraan\",\r\n    \"description\": \"Uang motor\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://simple-express-backend-production.up.railway.app/api/v1/categories/2bd2212e-baaa-475e-aa39-9f28a5ded877",
+									"protocol": "https",
+									"host": [
+										"simple-express-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"api",
+										"v1",
+										"categories",
+										"2bd2212e-baaa-475e-aa39-9f28a5ded877"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "249"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 05 Jul 2025 13:21:59 GMT"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"f9-nssKK3kZVP6ewxM3nBDKFv9VSpo\""
+								},
+								{
+									"key": "Server",
+									"value": "railway-edge"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "X-Railway-Edge",
+									"value": "railway/asia-southeast1-eqsg3a"
+								},
+								{
+									"key": "X-Railway-Request-Id",
+									"value": "N_uxPIypTfSzDYGrDcO5xA"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"status\": \"OK\",\n    \"message\": \"Category updated\",\n    \"data\": {\n        \"category\": {\n            \"id\": \"2bd2212e-baaa-475e-aa39-9f28a5ded877\",\n            \"name\": \"Kendaraan\",\n            \"description\": \"Uang motor\",\n            \"createdAt\": \"2025-07-05T12:54:25.266Z\",\n            \"updatedAt\": \"2025-07-05T13:21:59.501Z\"\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete category",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjhmMmM5NDY3LWQ2OTktNDFlZi04OTlmLTU1OGZlMDA4NzM0OCIsImVtYWlsIjoidXNlckBnbWFpbC5jb20iLCJpYXQiOjE3NTE3MjE0MjQsImV4cCI6MTc1MTgwNzgyNH0.e2ovKBsnrWjnAQaxabgIMJV6x7Ukh138juK3LPKUnhE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://simple-express-backend-production.up.railway.app/api/v1/categories/2bd2212e-baaa-475e-aa39-9f28a5ded877",
+							"protocol": "https",
+							"host": [
+								"simple-express-backend-production",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"api",
+								"v1",
+								"categories",
+								"2bd2212e-baaa-475e-aa39-9f28a5ded877"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Res Delete category",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "https://simple-express-backend-production.up.railway.app/api/v1/categories/2bd2212e-baaa-475e-aa39-9f28a5ded877",
+									"protocol": "https",
+									"host": [
+										"simple-express-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"api",
+										"v1",
+										"categories",
+										"2bd2212e-baaa-475e-aa39-9f28a5ded877"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "249"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 05 Jul 2025 13:26:37 GMT"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"f9-bq8bhiyzQp2RIVug/hCWQlstaPM\""
+								},
+								{
+									"key": "Server",
+									"value": "railway-edge"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "X-Railway-Edge",
+									"value": "railway/asia-southeast1-eqsg3a"
+								},
+								{
+									"key": "X-Railway-Request-Id",
+									"value": "yNEgWJcSTluQj42SDcO5xA"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"status\": \"OK\",\n    \"message\": \"Category deleted\",\n    \"data\": {\n        \"category\": {\n            \"id\": \"2bd2212e-baaa-475e-aa39-9f28a5ded877\",\n            \"name\": \"Kendaraan\",\n            \"description\": \"Uang motor\",\n            \"createdAt\": \"2025-07-05T12:54:25.266Z\",\n            \"updatedAt\": \"2025-07-05T13:21:59.501Z\"\n        }\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Transaction",
+			"item": [
+				{
+					"name": "Create Transaction",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjhmMmM5NDY3LWQ2OTktNDFlZi04OTlmLTU1OGZlMDA4NzM0OCIsImVtYWlsIjoidXNlckBnbWFpbC5jb20iLCJpYXQiOjE3NTE3MjE0MjQsImV4cCI6MTc1MTgwNzgyNH0.e2ovKBsnrWjnAQaxabgIMJV6x7Ukh138juK3LPKUnhE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"category_id\": \"2bd2212e-baaa-475e-aa39-9f28a5ded877\",\r\n  \"type\": \"EXPENSE\",\r\n  \"amount\": 100000,\r\n  \"description\": \"Motor ke kampus\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://simple-express-backend-production.up.railway.app/api/v1/transactions",
+							"protocol": "https",
+							"host": [
+								"simple-express-backend-production",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"api",
+								"v1",
+								"transactions"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Res Create Transaction",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"category_id\": \"2bd2212e-baaa-475e-aa39-9f28a5ded877\",\r\n  \"type\": \"EXPENSE\",\r\n  \"amount\": 100000,\r\n  \"description\": \"Motor ke kampus\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://simple-express-backend-production.up.railway.app/api/v1/transactions",
+									"protocol": "https",
+									"host": [
+										"simple-express-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"api",
+										"v1",
+										"transactions"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "562"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 05 Jul 2025 13:23:11 GMT"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"232-f+z/5/rqu0qD31CQWMNZ/EWJ/Dk\""
+								},
+								{
+									"key": "Server",
+									"value": "railway-edge"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "X-Railway-Edge",
+									"value": "railway/asia-southeast1-eqsg3a"
+								},
+								{
+									"key": "X-Railway-Request-Id",
+									"value": "fC88aOnTT0GoHPQyDcO5xA"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"status\": \"Created\",\n    \"message\": \"Transaction created\",\n    \"data\": {\n        \"transaction\": {\n            \"id\": \"07888ef5-30a3-4573-b23c-06e990bf45e7\",\n            \"user_id\": \"8f2c9467-d699-41ef-899f-558fe0087348\",\n            \"category_id\": \"2bd2212e-baaa-475e-aa39-9f28a5ded877\",\n            \"type\": \"EXPENSE\",\n            \"amount\": 100000,\n            \"description\": \"Motor ke kampus\",\n            \"createdAt\": \"2025-07-05T13:23:11.813Z\",\n            \"updatedAt\": \"2025-07-05T13:23:11.813Z\",\n            \"category\": {\n                \"id\": \"2bd2212e-baaa-475e-aa39-9f28a5ded877\",\n                \"name\": \"Kendaraan\",\n                \"description\": \"Uang motor\",\n                \"createdAt\": \"2025-07-05T12:54:25.266Z\",\n                \"updatedAt\": \"2025-07-05T13:21:59.501Z\"\n            }\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get all Transactions",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjhmMmM5NDY3LWQ2OTktNDFlZi04OTlmLTU1OGZlMDA4NzM0OCIsImVtYWlsIjoidXNlckBnbWFpbC5jb20iLCJpYXQiOjE3NTE3MjE0MjQsImV4cCI6MTc1MTgwNzgyNH0.e2ovKBsnrWjnAQaxabgIMJV6x7Ukh138juK3LPKUnhE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://simple-express-backend-production.up.railway.app/api/v1/transactions",
+							"protocol": "https",
+							"host": [
+								"simple-express-backend-production",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"api",
+								"v1",
+								"transactions"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Res Get all Transactions",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://simple-express-backend-production.up.railway.app/api/v1/transactions",
+									"protocol": "https",
+									"host": [
+										"simple-express-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"api",
+										"v1",
+										"transactions"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "821"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 05 Jul 2025 13:24:52 GMT"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"335-rRi80lyvpOU4ImL0cBbvbiOtoqo\""
+								},
+								{
+									"key": "Server",
+									"value": "railway-edge"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "X-Railway-Edge",
+									"value": "railway/asia-southeast1-eqsg3a"
+								},
+								{
+									"key": "X-Railway-Request-Id",
+									"value": "ieS_C5bnT9SNscmrDcO5xA"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"status\": \"OK\",\n    \"message\": \"Fetch all transactions success\",\n    \"data\": {\n        \"transactions\": [\n            {\n                \"id\": \"07888ef5-30a3-4573-b23c-06e990bf45e7\",\n                \"user_id\": \"8f2c9467-d699-41ef-899f-558fe0087348\",\n                \"category_id\": \"2bd2212e-baaa-475e-aa39-9f28a5ded877\",\n                \"type\": \"EXPENSE\",\n                \"amount\": 100000,\n                \"description\": \"Motor ke kampus\",\n                \"createdAt\": \"2025-07-05T13:23:11.813Z\",\n                \"updatedAt\": \"2025-07-05T13:23:11.813Z\",\n                \"category\": {\n                    \"id\": \"2bd2212e-baaa-475e-aa39-9f28a5ded877\",\n                    \"name\": \"Kendaraan\",\n                    \"description\": \"Uang motor\",\n                    \"createdAt\": \"2025-07-05T12:54:25.266Z\",\n                    \"updatedAt\": \"2025-07-05T13:21:59.501Z\"\n                },\n                \"user\": {\n                    \"id\": \"8f2c9467-d699-41ef-899f-558fe0087348\",\n                    \"name\": \"adamatmind\",\n                    \"email\": \"adam@gmail.com\",\n                    \"password\": \"$2b$10$jEUNu.y5B90YzIdnzlt8uOwiUD9BDwzOKadGxYhGGwXpxPxOQb3Ue\",\n                    \"createdAt\": \"2025-07-05T13:16:25.646Z\",\n                    \"updatedAt\": \"2025-07-05T13:18:49.424Z\"\n                }\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Transactions by ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjhmMmM5NDY3LWQ2OTktNDFlZi04OTlmLTU1OGZlMDA4NzM0OCIsImVtYWlsIjoidXNlckBnbWFpbC5jb20iLCJpYXQiOjE3NTE3MjE0MjQsImV4cCI6MTc1MTgwNzgyNH0.e2ovKBsnrWjnAQaxabgIMJV6x7Ukh138juK3LPKUnhE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://simple-express-backend-production.up.railway.app/api/v1/transactions/07888ef5-30a3-4573-b23c-06e990bf45e7",
+							"protocol": "https",
+							"host": [
+								"simple-express-backend-production",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"api",
+								"v1",
+								"transactions",
+								"07888ef5-30a3-4573-b23c-06e990bf45e7"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Res Get Transactions by ID",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://simple-express-backend-production.up.railway.app/api/v1/transactions/07888ef5-30a3-4573-b23c-06e990bf45e7",
+									"protocol": "https",
+									"host": [
+										"simple-express-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"api",
+										"v1",
+										"transactions",
+										"07888ef5-30a3-4573-b23c-06e990bf45e7"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "563"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 05 Jul 2025 13:25:05 GMT"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"233-lDLTHIQR24QPNmRt0IAumKxU0bM\""
+								},
+								{
+									"key": "Server",
+									"value": "railway-edge"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "X-Railway-Edge",
+									"value": "railway/asia-southeast1-eqsg3a"
+								},
+								{
+									"key": "X-Railway-Request-Id",
+									"value": "brWChZ7zTEieH_lRDcO5xA"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"status\": \"OK\",\n    \"message\": \"Fetch transaction success\",\n    \"data\": {\n        \"transaction\": {\n            \"id\": \"07888ef5-30a3-4573-b23c-06e990bf45e7\",\n            \"user_id\": \"8f2c9467-d699-41ef-899f-558fe0087348\",\n            \"category_id\": \"2bd2212e-baaa-475e-aa39-9f28a5ded877\",\n            \"type\": \"EXPENSE\",\n            \"amount\": 100000,\n            \"description\": \"Motor ke kampus\",\n            \"createdAt\": \"2025-07-05T13:23:11.813Z\",\n            \"updatedAt\": \"2025-07-05T13:23:11.813Z\",\n            \"category\": {\n                \"id\": \"2bd2212e-baaa-475e-aa39-9f28a5ded877\",\n                \"name\": \"Kendaraan\",\n                \"description\": \"Uang motor\",\n                \"createdAt\": \"2025-07-05T12:54:25.266Z\",\n                \"updatedAt\": \"2025-07-05T13:21:59.501Z\"\n            }\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Transactions (Amount)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjhmMmM5NDY3LWQ2OTktNDFlZi04OTlmLTU1OGZlMDA4NzM0OCIsImVtYWlsIjoidXNlckBnbWFpbC5jb20iLCJpYXQiOjE3NTE3MjE0MjQsImV4cCI6MTc1MTgwNzgyNH0.e2ovKBsnrWjnAQaxabgIMJV6x7Ukh138juK3LPKUnhE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"amount\": 200000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://simple-express-backend-production.up.railway.app/api/v1/transactions/07888ef5-30a3-4573-b23c-06e990bf45e7",
+							"protocol": "https",
+							"host": [
+								"simple-express-backend-production",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"api",
+								"v1",
+								"transactions",
+								"07888ef5-30a3-4573-b23c-06e990bf45e7"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Res Update Transactions (Amount)",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"amount\": 200000\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://simple-express-backend-production.up.railway.app/api/v1/transactions/07888ef5-30a3-4573-b23c-06e990bf45e7",
+									"protocol": "https",
+									"host": [
+										"simple-express-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"api",
+										"v1",
+										"transactions",
+										"07888ef5-30a3-4573-b23c-06e990bf45e7"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "557"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 05 Jul 2025 13:25:55 GMT"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"22d-8fbz2RtuTVd3SPypmlyBigOyiqM\""
+								},
+								{
+									"key": "Server",
+									"value": "railway-edge"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "X-Railway-Edge",
+									"value": "railway/asia-southeast1-eqsg3a"
+								},
+								{
+									"key": "X-Railway-Request-Id",
+									"value": "lj4dc24ZT-KHhBA4DcO5xA"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"status\": \"OK\",\n    \"message\": \"Transaction updated\",\n    \"data\": {\n        \"transaction\": {\n            \"id\": \"07888ef5-30a3-4573-b23c-06e990bf45e7\",\n            \"user_id\": \"8f2c9467-d699-41ef-899f-558fe0087348\",\n            \"category_id\": \"2bd2212e-baaa-475e-aa39-9f28a5ded877\",\n            \"type\": \"EXPENSE\",\n            \"amount\": 200000,\n            \"description\": \"Motor ke kampus\",\n            \"createdAt\": \"2025-07-05T13:23:11.813Z\",\n            \"updatedAt\": \"2025-07-05T13:25:55.890Z\",\n            \"category\": {\n                \"id\": \"2bd2212e-baaa-475e-aa39-9f28a5ded877\",\n                \"name\": \"Kendaraan\",\n                \"description\": \"Uang motor\",\n                \"createdAt\": \"2025-07-05T12:54:25.266Z\",\n                \"updatedAt\": \"2025-07-05T13:21:59.501Z\"\n            }\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Transactions (Amount+Desc)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjhmMmM5NDY3LWQ2OTktNDFlZi04OTlmLTU1OGZlMDA4NzM0OCIsImVtYWlsIjoidXNlckBnbWFpbC5jb20iLCJpYXQiOjE3NTE3MjE0MjQsImV4cCI6MTc1MTgwNzgyNH0.e2ovKBsnrWjnAQaxabgIMJV6x7Ukh138juK3LPKUnhE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"amount\": 200000,\r\n  \"description\": \"Motor ke kosan teman\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://simple-express-backend-production.up.railway.app/api/v1/transactions/07888ef5-30a3-4573-b23c-06e990bf45e7",
+							"protocol": "https",
+							"host": [
+								"simple-express-backend-production",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"api",
+								"v1",
+								"transactions",
+								"07888ef5-30a3-4573-b23c-06e990bf45e7"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Res Update Transactions (Amount+Desc)",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"amount\": 200000,\r\n  \"description\": \"Motor ke kosan teman\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://simple-express-backend-production.up.railway.app/api/v1/transactions/07888ef5-30a3-4573-b23c-06e990bf45e7",
+									"protocol": "https",
+									"host": [
+										"simple-express-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"api",
+										"v1",
+										"transactions",
+										"07888ef5-30a3-4573-b23c-06e990bf45e7"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "562"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 05 Jul 2025 13:26:04 GMT"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"232-uKGtE7Cr593mQTBXJFcCAWwPBDQ\""
+								},
+								{
+									"key": "Server",
+									"value": "railway-edge"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "X-Railway-Edge",
+									"value": "railway/asia-southeast1-eqsg3a"
+								},
+								{
+									"key": "X-Railway-Request-Id",
+									"value": "urNk_U24Q-G98WH4DcO5xA"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"status\": \"OK\",\n    \"message\": \"Transaction updated\",\n    \"data\": {\n        \"transaction\": {\n            \"id\": \"07888ef5-30a3-4573-b23c-06e990bf45e7\",\n            \"user_id\": \"8f2c9467-d699-41ef-899f-558fe0087348\",\n            \"category_id\": \"2bd2212e-baaa-475e-aa39-9f28a5ded877\",\n            \"type\": \"EXPENSE\",\n            \"amount\": 200000,\n            \"description\": \"Motor ke kosan teman\",\n            \"createdAt\": \"2025-07-05T13:23:11.813Z\",\n            \"updatedAt\": \"2025-07-05T13:26:04.961Z\",\n            \"category\": {\n                \"id\": \"2bd2212e-baaa-475e-aa39-9f28a5ded877\",\n                \"name\": \"Kendaraan\",\n                \"description\": \"Uang motor\",\n                \"createdAt\": \"2025-07-05T12:54:25.266Z\",\n                \"updatedAt\": \"2025-07-05T13:21:59.501Z\"\n            }\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete transaction",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjhmMmM5NDY3LWQ2OTktNDFlZi04OTlmLTU1OGZlMDA4NzM0OCIsImVtYWlsIjoidXNlckBnbWFpbC5jb20iLCJpYXQiOjE3NTE3MjE0MjQsImV4cCI6MTc1MTgwNzgyNH0.e2ovKBsnrWjnAQaxabgIMJV6x7Ukh138juK3LPKUnhE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://simple-express-backend-production.up.railway.app/api/v1/transactions/07888ef5-30a3-4573-b23c-06e990bf45e7",
+							"protocol": "https",
+							"host": [
+								"simple-express-backend-production",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"api",
+								"v1",
+								"transactions",
+								"07888ef5-30a3-4573-b23c-06e990bf45e7"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Res Delete transaction",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "https://simple-express-backend-production.up.railway.app/api/v1/transactions/07888ef5-30a3-4573-b23c-06e990bf45e7",
+									"protocol": "https",
+									"host": [
+										"simple-express-backend-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"api",
+										"v1",
+										"transactions",
+										"07888ef5-30a3-4573-b23c-06e990bf45e7"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Length",
+									"value": "381"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 05 Jul 2025 13:26:23 GMT"
+								},
+								{
+									"key": "Etag",
+									"value": "W/\"17d-Ck6TChaj2hYpr1FCBQpE2L+7B18\""
+								},
+								{
+									"key": "Server",
+									"value": "railway-edge"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "X-Railway-Edge",
+									"value": "railway/asia-southeast1-eqsg3a"
+								},
+								{
+									"key": "X-Railway-Request-Id",
+									"value": "dJlN8T2fRma2u8dyDcO5xA"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"status\": \"OK\",\n    \"message\": \"Transaction deleted\",\n    \"data\": {\n        \"transaction\": {\n            \"id\": \"07888ef5-30a3-4573-b23c-06e990bf45e7\",\n            \"user_id\": \"8f2c9467-d699-41ef-899f-558fe0087348\",\n            \"category_id\": \"2bd2212e-baaa-475e-aa39-9f28a5ded877\",\n            \"type\": \"EXPENSE\",\n            \"amount\": 200000,\n            \"description\": \"Motor ke kosan teman\",\n            \"createdAt\": \"2025-07-05T13:23:11.813Z\",\n            \"updatedAt\": \"2025-07-05T13:26:04.961Z\"\n        }\n    }\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
