@@ -23,7 +23,7 @@
 Project/
 ├── docs/
 │   ├── Api-Documentation.postman_collection
-│   └── ERD
+│   └── ERD.png
 ├── prisma/
 │   ├── migrations/
 │   └── schema.prisma
