@@ -43,6 +43,7 @@ Project/
 
 **Keterangan:**
 - `prisma/` — berisi schema dan migrasi database Prisma.
+- `docs/` — berisi erd dan dokumentasi via postman .
 - `src/` — seluruh source code aplikasi.
   - `utils/` — utilitas umum (logger, response, db).
   - `errors/` — handler dan definisi error.
