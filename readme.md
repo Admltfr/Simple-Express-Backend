@@ -1,9 +1,6 @@
 # Simple Express Backend API
 
-API base URL:  
-`https://simple-express-backend-production.up.railway.app/api/v1/`
-
----
+Proyek sederhana pengelola keuangan menggunakan Express.js
 
 ## 📦 Fitur Utama
 
@@ -15,8 +12,42 @@ API base URL:
 - **Logging** dengan Morgan & Winston
 - **ORM** dengan Prisma
 - **Database** MySQL
+- **Deployment** dengan Railway
 
 ---
+
+## 🗂️ Struktur Folder 
+
+```
+Project/
+├── prisma/
+│   ├── migrations/
+│   └── schema.prisma
+|
+├── src/
+│   ├── app.js
+│   ├── server.js
+│   ├── utils/
+│   ├── errors/
+│   ├── middlewares/
+│   └── domains/
+│       ├── auth/
+│       ├── transaction/
+│       └── transaction_category/
+|
+├── .env
+```
+
+**Keterangan:**
+- `prisma/` — berisi schema dan migrasi database Prisma.
+- `src/` — seluruh source code aplikasi.
+  - `utils/` — utilitas umum (logger, response, db).
+  - `errors/` — handler dan definisi error.
+  - `middlewares/` — middleware Express (auth, validator).
+  - `domains/` — modularisasi fitur utama (auth, transaction, transaction_category).
+- `.env` — konfigurasi environment (port, database, jwt secret).
+- `package.json` — dependensi dan script npm.
+- `readme.md` — dokumentasi proyek.
 
 ## 🔌 Plugin/Library yang Digunakan
 
@@ -35,9 +66,10 @@ API base URL:
 ### Auth
 | Method | Endpoint                | Body / Params                          | Keterangan            |
 |--------|-------------------------|----------------------------------------|-----------------------|
+| GET   | `/auth/users  `          | -                                      | List semua user    |
 | POST   | `/auth/register`        | `{ name, email, password, password_confirmation }` | Register user baru    |
 | POST   | `/auth/login`           | `{ email, password }`                  | Login user, dapatkan token |
-| POST   | `/auth/me`              | -                                      | Get profile user login (token) |
+| POST   | `/auth/me`              | `{ id }`                               | Data profile user login |
 | PATCH  | `/auth/me`              | `{ name?, email? }`                    | Update profile user   |
 | PATCH  | `/auth/reset-password`  | `{ password, password_confirmation }`  | Reset password user   |
 | DELETE | `/auth/me`              | -                                      | Hapus user login      |
@@ -45,316 +77,74 @@ API base URL:
 ### Transaction Category
 | Method | Endpoint                | Body / Params                          | Keterangan            |
 |--------|-------------------------|----------------------------------------|-----------------------|
-| POST   | `/categories`           | `{ name, description? }`               | Tambah kategori       |
-| GET    | `/categories`           | -                                      | List kategori         |
-| GET    | `/categories/:id`       | -                                      | Detail kategori       |
+| POST   | `/categories/`          | `{ name, description? }`               | Tambah kategori       |
+| GET    | `/categories/`          | -                                      | List kategori         |
+| GET    | `/categories/:id`       | -                                      | Data kategori transaksi berdasarkan id       |
 | PATCH  | `/categories/:id`       | `{ name?, description? }`              | Update kategori       |
 | DELETE | `/categories/:id`       | -                                      | Hapus kategori        |
 
 ### Transaction
 | Method | Endpoint                | Body / Params                          | Keterangan            |
 |--------|-------------------------|----------------------------------------|-----------------------|
-| POST   | `/transactions`         | `{ category_id, type, amount, description? }` | Tambah transaksi      |
-| GET    | `/transactions`         | -                                      | List transaksi user login |
-| GET    | `/transactions/all`     | -                                      | List semua transaksi (admin) |
-| GET    | `/transactions/user/:user_id` | -                                 | List transaksi by user id (admin) |
-| GET    | `/transactions/:id`     | -                                      | Detail transaksi       |
+| POST   | `/transactions/`        | `{ category_id, type, amount, description? }` | Tambah transaksi      |
+| GET    | `/transactions/`        | -                                      | List semua transaksi |    |
+| GET  | `/transactions/:id`       | -                                      | Data transaksi berdasarkan id      |
 | PATCH  | `/transactions/:id`     | `{ category_id?, type?, amount?, description? }` | Update transaksi      |
-| DELETE | `/transactions/:id`     | -                                      | Hapus transaksi        |
+| DELETE | `/transactions/:id`     | - | Hapus transaksi                    |
 
 ---
 
-## 🗂️ Contoh Request/Response
+## 🚀 Cara Setup & Menjalankan Secara Lokal
 
-### AUTH
+1. **Clone repository ini**
+   ```sh
+   git clone <repo-url>
+   cd Project/
+   ```
 
-#### **Register**
-**POST** `/auth/register`
-```json
-// Request Body
-{
-  "name": "Budi",
-  "email": "budi@mail.com",
-  "password": "Password123!",
-  "password_confirmation": "Password123!"
-}
-```
-**Response**
-```json
-{
-  "success": true,
-  "status": "Created",
-  "message": "Register success",
-  "data": {
-    "user": {
-      "id": "uuid",
-      "name": "Budi",
-      "email": "budi@mail.com"
-    }
-  }
-}
-```
+2. **Install dependencies**
+   ```sh
+   npm install
+   ```
 
----
+3. **Set file environment**
+   ```sh
+   cp .env.example .env
+   ```
+   Lalu edit `.env` dan sesuaikan:
+   - `DATABASE_URL` (contoh: `mysql://root:password@localhost:3306/nama_db`)
+   - `JWT_SECRET`
+   - `PORT` (contoh: 3000)
 
-#### **Login**
-**POST** `/auth/login`
-```json
-// Request Body
-{
-  "email": "budi@mail.com",
-  "password": "Password123!"
-}
-```
-**Response**
-```json
-{
-  "success": true,
-  "status": "OK",
-  "message": "Login success",
-  "data": {
-    "user": {
-      "id": "uuid",
-      "email": "budi@mail.com",
-      "name": "Budi"
-    },
-    "token": "jwt-token"
-  }
-}
-```
+4. **Jalankan migrasi database**
+   ```sh
+   npx prisma migrate dev
+   ```
+
+5. **Jalankan server**
+   ```sh
+   npm start
+   ```
+   API akan berjalan di `http://localhost:3000/api/v1/` (atau port sesuai `.env`).
 
 ---
 
-#### **Get Profile**
-**POST** `/auth/me`
-```json
-// Request Body
-{
-  "id": "user-uuid"
-}
-```
-**Headers:**  
-`Authorization: Bearer <token>`
+## 🌐 Menggunakan Domain yang Sudah Dideploy (Railway)
 
-**Response**
-```json
-{
-  "success": true,
-  "status": "OK",
-  "message": "Fetch user data success",
-  "data": {
-    "user": {
-      "name": "Budi",
-      "email": "budi@mail.com",
-      "created_at": "2025-07-05T12:00:00.000Z",
-      "updated_at": "2025-07-05T12:00:00.000Z"
-    }
-  }
-}
-```
+- **API base URL:**  
+  ```
+  https://simple-express-backend-production.up.railway.app/api/v1/
+  ```
 
----
+- Gunakan URL di atas pada Postman, aplikasi frontend, atau tools lain untuk akses API secara online.
+- Semua endpoint sama seperti di lokal, hanya ganti base URL.
+  ```
+  http://localhost:3000/api/v1/
+  ```
+  Ubah menjadi
+  ```
+  https://simple-express-backend-production.up.railway.app/api/v1/
+  ```
 
-#### **Reset Password**
-**PATCH** `/auth/reset-password`
-```json
-// Request Body
-{
-  "password": "PasswordBaru123!",
-  "password_confirmation": "PasswordBaru123!"
-}
-```
-**Headers:**  
-`Authorization: Bearer <token>`
-
-**Response**
-```json
-{
-  "success": true,
-  "status": "OK",
-  "message": "Reset password success",
-  "data": {
-    "user": {
-      "id": "uuid",
-      "name": "Budi",
-      "email": "budi@mail.com",
-      "createdAt": "2025-07-05T12:00:00.000Z",
-      "updatedAt": "2025-07-05T12:00:00.000Z"
-    }
-  }
-}
-```
-
----
-
-### TRANSACTION CATEGORY
-
-#### **Tambah Kategori**
-**POST** `/categories`
-```json
-// Request Body
-{
-  "name": "Makanan",
-  "description": "Pengeluaran untuk makan harian"
-}
-```
-**Headers:**  
-`Authorization: Bearer <token>`
-
-**Response**
-```json
-{
-  "success": true,
-  "status": "Created",
-  "message": "Category created",
-  "data": {
-    "category": {
-      "id": "uuid-category",
-      "name": "Makanan",
-      "description": "Pengeluaran untuk makan harian",
-      "createdAt": "2025-07-05T12:00:00.000Z",
-      "updatedAt": "2025-07-05T12:00:00.000Z"
-    }
-  }
-}
-```
-
----
-
-#### **List Kategori**
-**GET** `/categories`
-**Headers:**  
-`Authorization: Bearer <token>`
-
-**Response**
-```json
-{
-  "success": true,
-  "status": "OK",
-  "message": "Fetch categories success",
-  "data": {
-    "categories": [
-      {
-        "id": "uuid-category",
-        "name": "Makanan",
-        "description": "Pengeluaran untuk makan harian",
-        "createdAt": "2025-07-05T12:00:00.000Z",
-        "updatedAt": "2025-07-05T12:00:00.000Z"
-      }
-    ]
-  }
-}
-```
-
----
-
-#### **Update Kategori**
-**PATCH** `/categories/:id`
-```json
-// Request Body
-{
-  "name": "Transportasi"
-}
-```
-**Headers:**  
-`Authorization: Bearer <token>`
-
----
-
-#### **Delete Kategori**
-**DELETE** `/categories/:id`
-**Headers:**  
-`Authorization: Bearer <token>`
-
----
-
-### TRANSACTION
-
-#### **Tambah Transaksi**
-**POST** `/transactions`
-```json
-// Request Body
-{
-  "category_id": "uuid-category",
-  "type": "INCOME",
-  "amount": 100000,
-  "description": "Gaji"
-}
-```
-**Headers:**  
-`Authorization: Bearer <token>`
-
-**Response**
-```json
-{
-  "success": true,
-  "status": "Created",
-  "message": "Transaction created",
-  "data": {
-    "transaction": {
-      "id": "uuid-trx",
-      "user_id": "uuid-user",
-      "category_id": "uuid-category",
-      "type": "INCOME",
-      "amount": 100000,
-      "description": "Gaji",
-      "createdAt": "2025-07-05T12:00:00.000Z",
-      "updatedAt": "2025-07-05T12:00:00.000Z",
-      "category": {
-        "id": "uuid-category",
-        "name": "Makanan"
-      }
-    }
-  }
-}
-```
-
----
-
-#### **List Transaksi User**
-**GET** `/transactions`
-**Headers:**  
-`Authorization: Bearer <token>`
-
----
-
-#### **List Semua Transaksi (Admin)**
-**GET** `/transactions/all`
-**Headers:**  
-`Authorization: Bearer <token>`
-
----
-
-#### **List Transaksi by User Id (Admin)**
-**GET** `/transactions/user/:user_id`
-**Headers:**  
-`Authorization: Bearer <token>`
-
----
-
-#### **Detail Transaksi**
-**GET** `/transactions/:id`
-**Headers:**  
-`Authorization: Bearer <token>`
-
----
-
-#### **Update Transaksi**
-**PATCH** `/transactions/:id`
-```json
-// Request Body
-{
-  "amount": 200000
-}
-```
-**Headers:**  
-`Authorization: Bearer <token>`
-
----
-
-#### **Delete Transaksi**
-**DELETE** `/transactions/:id`
-**Headers:**  
-`Authorization: Bearer <token>`
 
 ---
