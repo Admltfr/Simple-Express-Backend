@@ -98,8 +98,8 @@ Project/
 
 1. **Clone repository ini**
    ```sh
-   git clone <repo-url>
-   cd Project/
+   git clone https://github.com/Admltfr/Simple-Express-Backend
+   cd Simple-Express-Backend/
    ```
 
 2. **Install dependencies**
@@ -123,7 +123,11 @@ Project/
 
 5. **Jalankan server**
    ```sh
-   npm start
+   npm run dev
+   ```
+   Atau
+   ```sh
+   npm run start
    ```
    API akan berjalan di `http://localhost:3000/api/v1/` (atau port sesuai `.env`).
 
@@ -145,6 +149,6 @@ Project/
   ```
   https://simple-express-backend-production.up.railway.app/api/v1/
   ```
-
+- Catatan : Kalau errcon berarti trial railwaynya sudah habis
 
 ---
