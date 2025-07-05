@@ -53,7 +53,7 @@ class AuthController {
 
   async getAll(req, res, next) {
     try {
-      const users = await AuthService.index();
+      const users = await AuthService.getAll();
       return BaseResponse.success(res, { users }, "Fetch all users success");
     } catch (err) {
       next(err);
